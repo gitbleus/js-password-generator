@@ -1,16 +1,20 @@
 # Gerador de Senhas
 
-Um gerador de senhas seguras e personalizáveis desenvolvido com JavaScript moderno.
+Projeto de um gerador de senhas aleatórias e seguras, desenvolvido para praticar conceitos de Webpack, Babel e Tailwind CSS.
 
-## 🚀 Tecnologias
+## 🛠️ Tecnologias
 * JavaScript (ES6+)
 * Tailwind CSS v4
-* Webpack & Babel
+* Webpack 5
+* Babel
 * PostCSS
 
 ## 📦 Instalação
 
 ```bash
-# Instalar dependências
+# Clone o repositório
+git clone https://github.com/gitbleus/js-password-generator.git
+
+# Ao entrar na pasta do projeto, instale as dependências:
 npm install
 ```
