@@ -11,21 +11,17 @@ export function geraSenha(qtd, maiusculas, minusculas, numeros, simbolos) {
 
   if (qtd > 128) return 'Você ultrapassou 128 caracteres!';
 
+  const geradores = [];
+  if (maiusculas) geradores.push(geraMaiuscula);
+  if (minusculas) geradores.push(geraMinuscula);
+  if (numeros) geradores.push(geraNumero);
+  if (simbolos) geradores.push(geraSimbolo);
+
   for (let i = 0; i < qtd; i++) {
-    if (maiusculas) {
-      senhaArray.push(geraMaiuscula())
-    }
-    if (minusculas) {
-      senhaArray.push(geraMinuscula())
-    }
-    if (numeros) {
-      senhaArray.push(geraNumero())
-    }
-    if (simbolos) {
-      senhaArray.push(geraSimbolo())
-    }
+    const geradorAleatorio = geradores[Math.floor(Math.random() * geradores.length)];
+    senhaArray.push(geradorAleatorio());
   }
 
-  return senhaArray.join('').slice(0, qtd)
+  return senhaArray.join('');
 }
 
