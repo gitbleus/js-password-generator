@@ -9,6 +9,8 @@ export function geraSenha(qtd, maiusculas, minusculas, numeros, simbolos) {
   const senhaArray = [];
   qtd = Number(qtd);
 
+  if (qtd > 128) return 'Você ultrapassou 128 caracteres!';
+
   for (let i = 0; i < qtd; i++) {
     if (maiusculas) {
       senhaArray.push(geraMaiuscula())

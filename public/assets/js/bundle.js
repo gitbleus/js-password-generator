@@ -1455,6 +1455,7 @@ var geraSimbolo = function geraSimbolo() {
 function geraSenha(qtd, maiusculas, minusculas, numeros, simbolos) {
   var senhaArray = [];
   qtd = Number(qtd);
+  if (qtd > 128) return 'Você ultrapassou 128 caracteres!';
   for (var i = 0; i < qtd; i++) {
     if (maiusculas) {
       senhaArray.push(geraMaiuscula());
